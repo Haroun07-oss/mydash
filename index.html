@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDash | Votre Espace Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+    <div class="container">
+        <header>
+            <div class="user-info">
+                <h1 id="welcome-msg">Bonjour !</h1>
+                <p id="real-time-clock">00:00:00</p>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" class="btn-icon" title="Changer de thème">🌙</button>
+                <button id="logout-btn" class="btn-text" style="display:none;">Déconnexion</button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            
+            <section class="card weather">
+                <div class="card-header">
+                    <h2>Météo</h2>
+                    <span class="icon">☁️</span>
+                </div>
+                <div id="weather-content" class="card-body">
+                    <p class="loading">Chargement des données...</p>
+                </div>
+            </section>
+
+            <section class="card info">
+                <div class="card-header">
+                    <h2>Session</h2>
+                    <span class="icon">📊</span>
+                </div>
+                <div class="card-body">
+                    <p id="session-info">Bienvenue sur votre espace sécurisé par cookies.</p>
+                </div>
+            </section>
+
+            <section class="card todo">
+                <div class="card-header">
+                    <h2>Ma Liste</h2>
+                    <span class="icon">✅</span>
+                </div>
+                <div class="card-body">
+                    <div class="todo-input-group">
+                        <input type="text" id="todo-input" placeholder="Ajouter une tâche..." autocomplete="off">
+                        <button id="add-task-btn">Ajouter</button>
+                    </div>
+                    <ul id="todo-list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
